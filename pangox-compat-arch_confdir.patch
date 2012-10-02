@@ -1,0 +1,22 @@
+--- pangox-compat-0.0.1/Makefile.am.orig	2012-10-02 22:02:36.093847701 +0200
++++ pangox-compat-0.0.1/Makefile.am	2012-10-02 22:02:55.980513954 +0200
+@@ -20,7 +20,7 @@
+ pangoincludedir=$(includedir)/pango-1.0/pango
+ pangoinclude_HEADERS = pangox.h
+ 
+-aliasdir = $(sysconfdir)/pango
++aliasdir = $(sysconfdir)
+ alias_DATA = pangox.aliases
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+--- pangox-compat-0.0.1/pangox-fontmap.c.orig	2012-10-02 22:02:36.093847701 +0200
++++ pangox-compat-0.0.1/pangox-fontmap.c	2012-10-02 22:03:53.873846080 +0200
+@@ -945,7 +945,7 @@
+   int n;
+ 
+   if (!files_str)
+-    files_str = g_strdup ("~/.pangox_aliases:" SYSCONFDIR "/pango/pangox.aliases");
++    files_str = g_strdup ("~/.pangox_aliases:" SYSCONFDIR "/pangox.aliases");
+ 
+   files = pango_split_file_list (files_str);
+ 
