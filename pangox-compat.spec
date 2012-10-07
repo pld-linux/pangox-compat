@@ -1,4 +1,3 @@
-# $Revision: 1.236 $, $Date: 2012/06/11 14:39:51 $
 #
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
