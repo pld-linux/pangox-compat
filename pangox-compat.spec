@@ -6,7 +6,7 @@ Summary:	System for layout and rendering of internationalized text - X11 backend
 Summary(pl.UTF-8):	System renderowania międzynarodowego tekstu - backend X11
 Name:		pangox-compat
 Version:	0.0.2
-Release:	1
+Release:	2
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/pangox-compat/0.0/%{name}-%{version}.tar.xz
