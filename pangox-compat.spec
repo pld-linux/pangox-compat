@@ -6,7 +6,7 @@ Summary:	System for layout and rendering of internationalized text - X11 backend
 Summary(pl.UTF-8):	System renderowania międzynarodowego tekstu - backend X11
 Name:		pangox-compat
 Version:	0.0.2
-Release:	4
+Release:	5
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/pangox-compat/0.0/%{name}-%{version}.tar.xz
@@ -96,6 +96,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libpangox-1.0.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -113,7 +115,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libpangox-1.0.so
-%{_libdir}/libpangox-1.0.la
 %{_pkgconfigdir}/pangox.pc
 %{_includedir}/pango-1.0/pango/pangox.h
 
